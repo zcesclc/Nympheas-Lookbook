@@ -1,0 +1,3 @@
+(()=>{const input=document.getElementById('video-file'),video=document.getElementById('invitation-video'),empty=document.getElementById('video-empty'),status=document.getElementById('video-status');let url;
+input.addEventListener('change',()=>{const file=input.files[0];if(!file)return;if(!file.type.startsWith('video/')){status.textContent='請選擇影片檔案';return}video.pause();if(url)URL.revokeObjectURL(url);url=URL.createObjectURL(file);video.src=url;video.hidden=false;empty.hidden=true;video.load();status.textContent=file.name+' · 僅本機預覽，重新整理後需重新選擇'});
+video.addEventListener('error',()=>{status.textContent='瀏覽器無法播放此格式，請試用 MP4（H.264）影片'});window.addEventListener('pagehide',()=>{if(url)URL.revokeObjectURL(url)});})();

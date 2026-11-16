@@ -1,0 +1,26 @@
+:root{
+  --nym-ivory:#F3E7CE;
+  --nym-ivory-light:#FAF3E5;
+  --nym-purple:#705575;
+  --nym-purple-soft:#A58AA8;
+  --nym-pink:#B78F9D;
+  --nym-green:#527B70;
+  --nym-blue:#777F9A;
+  --nym-ink:#514259;
+}
+body{color:var(--nym-purple)}
+.letter{left:6%;width:88%;color:var(--nym-purple);background-color:var(--nym-ivory);background-blend-mode:multiply;padding-left:8%;padding-right:8%}
+.letter{background:none;box-shadow:none;isolation:isolate}
+.letter::after{content:"";position:absolute;inset:0;z-index:-1;background:var(--nym-ivory) url('assets/letter-bordered.png') center top/100% 100%;background-blend-mode:multiply;opacity:.82;pointer-events:none}
+.envelope-back,.envelope-front{filter:sepia(.48) saturate(.86)}
+.envelope-front,.drawn .envelope-front{opacity:.68}
+.envelope-back,.drawn .envelope-back{opacity:.64}
+.wax-seal{position:absolute;z-index:4;top:70%;left:50%;width:19%;transform:translate(-50%,-50%);border:0;padding:0;background:none;cursor:pointer;transition:opacity .15s,transform .3s;touch-action:manipulation}
+.wax-seal img{display:block;width:100%;height:auto;filter:drop-shadow(0 2px 2px #51425933)}
+.drawn .wax-seal{opacity:0;pointer-events:none;transform:translate(-50%,-30%)}
+.stage:not(.open) .wax-seal{pointer-events:none}
+.sheet{background-color:#f3e7ce22}
+body>main:not(.stage){background-color:var(--nym-ivory);background-blend-mode:multiply;border-color:var(--nym-purple-soft)}
+body>header{background:var(--nym-ivory-light);color:var(--nym-purple)}
+main:not(.stage) section{border-color:var(--nym-purple-soft)}
+main:not(.stage) a{color:var(--nym-purple)}

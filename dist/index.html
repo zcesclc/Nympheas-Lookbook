@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#e8e5df">
+<meta name="description" content="An unfolding lookbook for Nymphéas Studio.">
+<title>Nymphéas Studio — Paper Lookbook</title>
+<style>
+@import url('fonts.css');
+*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#514e69}button{font:inherit}.stage{position:relative;width:100%;height:100dvh;overflow:hidden;isolation:isolate}.scene{position:absolute;inset:0;background:#514e69 url('assets/water-lilies-purple.jpg') center center/cover no-repeat}
+    .brand{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:30px;z-index:1;transform:translateY(12%);color:#3f3443;text-shadow:0 2px 2px #f8d9c7b8,0 0 24px #f6d5c9cc}
+    .brand:before{content:"";position:absolute;width:min(94%,690px);height:240px;border-radius:50%;background:#efd7c652;filter:blur(40px);z-index:-1;pointer-events:none}
+    h1{margin:0;font:italic 400 clamp(64px,9vw,115px)/.94 'Snell Roundhand','Apple Chancery',Baskerville,'Palatino Linotype',Georgia,serif;letter-spacing:-.045em;white-space:nowrap}
+    h1 span{display:block;font-size:.65em;line-height:1.3;letter-spacing:.015em;margin-top:.02em}
+
+.sheet{position:absolute;inset:0;z-index:3;background:linear-gradient(110deg,#f2ecdf3b,#fffdf546 52%,#dfd6c637);backdrop-filter:blur(9px) saturate(.7);-webkit-backdrop-filter:blur(9px) saturate(.7);will-change:clip-path;pointer-events:none}.sheet:before,.sheet:after{content:"";position:absolute;inset:0;background:url('assets/vellum-fibres.webp') center/100% 100%;opacity:.47;mix-blend-mode:screen}.sheet:after{opacity:.17;mix-blend-mode:multiply}.folds{position:absolute;inset:0;width:100%;height:100%;z-index:4;pointer-events:none;overflow:visible}.ribbon{position:absolute;z-index:5;inset:0;pointer-events:none;transform-origin:50% 49%;filter:drop-shadow(0 5px 5px #493a4325)}.ribbon svg{width:100%;height:100%;overflow:visible}.ribbon:after{display:none}.seal{position:absolute;z-index:6;left:50%;top:49%;transform:translate(-50%,-34%) rotate(-5deg);border:0;padding:19px 30px;color:#65515f;background:#f8f1e5 url('assets/vellum-fibres.webp') center/cover;box-shadow:1px 6px 14px #49384633;cursor:pointer;font:italic 20px Georgia,serif;touch-action:none}.hint{position:absolute;z-index:6;bottom:max(30px,env(safe-area-inset-bottom));width:100%;text-align:center;font:10px Arial,sans-serif;letter-spacing:.22em;text-transform:uppercase;color:#70616c;pointer-events:none}.replay{position:absolute;z-index:7;right:22px;bottom:max(22px,env(safe-area-inset-bottom));padding:12px 16px;border:1px solid #806c7770;background:#f7f1e8c9;color:#584a55;font:10px Arial,sans-serif;letter-spacing:.16em;cursor:pointer;opacity:0;pointer-events:none}.open .replay{opacity:1;pointer-events:auto}button:focus-visible{outline:2px solid #66516f;outline-offset:5px}.stage{touch-action:pan-y}.opening .seal,.opening .ribbon,.opening .hint{pointer-events:none}.open .seal,.open .ribbon,.open .hint{visibility:hidden}@media(max-width:700px){h1{font-size:clamp(43px,11vw,85px)}.brand{padding:15px}.brand:before{height:160px}.ribbon{height:100%}.seal{font-size:18px;padding:17px 26px}}
+@font-face{font-family:Whimsy;src:url('assets/whimsy.woff') format('woff');font-display:swap}.ribbon-assembly{position:absolute;inset:0;z-index:6;pointer-events:none;transform-origin:50% 49%}.ribbon-assembly .ribbon{z-index:0}.seal{pointer-events:auto;top:49%;width:clamp(155px,23vw,240px);padding:0;background:none;border:0;box-shadow:none;transform:translate(-58%,-18%) rotate(4deg);filter:drop-shadow(2px 6px 5px #483e3733)}.seal svg{display:block;width:100%;height:auto;overflow:visible}.tag-name{font:23px Whimsy;fill:#773f50}.tag-studio{font:17px Whimsy;fill:#773f50}.open .ribbon-assembly{visibility:hidden}h1{font-family:Whimsy,Georgia,serif;font-size:clamp(45px,7vw,85px)}.letter-scene{position:absolute;z-index:2;bottom:-3%;left:50%;transform:translateX(-50%);width:min(77vw,490px);aspect-ratio:1183/1300;opacity:0;transition:opacity .8s}.stage.open .letter-scene{opacity:1}.envelope-back,.envelope-front{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;pointer-events:none}.envelope-back{z-index:0}.envelope-front{z-index:2;clip-path:polygon(0 42%,50% 66%,100% 42%,100% 100%,0 100%)}.letter{position:absolute;z-index:1;left:12%;top:48%;width:76%;height:62%;padding:12% 6%;text-align:center;color:#705575;background:#f4eff1 url('assets/vellum-fibres.webp') center/cover;box-shadow:0 -3px 16px #68567326;transition:transform 2.4s cubic-bezier(.22,.61,.36,1);transform:translateY(0);border:1px solid #d1bdce}.letter span{font:clamp(24px,4vw,38px) Whimsy,serif}.letter p{font:italic 14px Georgia,serif}.drawn .letter{transform:translateY(-65%) rotate(-3deg)}.draw-letter{position:absolute;z-index:3;bottom:16%;left:50%;transform:translateX(-50%);border:0;background:none;color:#705575;font:italic 14px Georgia,serif;white-space:nowrap;cursor:pointer}.tag-name,.tag-studio{fill:#705575}.hint,.replay{color:#705575}.replay{background:#f1eaf0;border-color:#a38aa5}.stage:not(.open) .letter-scene{pointer-events:none}@media(max-width:600px){.letter-scene{width:92vw;bottom:0}}@media(prefers-reduced-motion:reduce){.letter{transition:none}}.letter-scene{opacity:1;top:50%;bottom:auto;width:min(86vw,528px,66vh);transform:translate(-50%,-50%);transition:top 1.4s,transform 1.4s}.letter-scene.drawn{top:100%;transform:translate(-50%,-70%)}.envelope-back{opacity:.66;clip-path:polygon(0 0,100% 0,100% 43%,50% 65%,0 43%)}.envelope-front{opacity:.78}.letter{top:32%;height:75%;border:double 4px #cebbce;border-radius:32px 32px 5px 5px;touch-action:none;cursor:grab}.letter:before{content:'❧';display:block;font-size:36px;color:#b99ab4;text-shadow:1px 1px white}.letter span,.letter p{display:block}.drawn .letter{transform:translateY(calc(-90% - var(--extra,0px))) rotate(-2deg)}#nav{position:absolute;right:12px;top:35%;z-index:20;display:none;gap:8px;flex-direction:column}.open #nav{display:flex}#nav button,#panel button{background:#f0e8f0;color:#705575;border:1px solid #bca8c0;padding:12px;cursor:pointer}#panel{position:absolute;z-index:30;left:12px;bottom:12px;background:#f2edf2f0;color:#705575;padding:15px;width:230px;font:13px Arial}#panel label{display:block;margin:12px 0}#panel input{width:100%}.editing [data-edit]{outline:1px dashed #a98baa;cursor:move;touch-action:none}.editing .selected{outline:2px solid #705575}@media(prefers-reduced-motion:reduce){.letter-scene,.letter{transition:none}}</style>
+<style>
+/* Preserve the chosen paper size while removing the large dead space below its copy. */
+.paper-pocket{position:absolute;inset:0;z-index:1;clip-path:inset(-200% -10% 10%);pointer-events:none}
+.letter{box-sizing:border-box;top:30%;height:118%;display:flex;flex-direction:column;justify-content:flex-start;padding:8% 6%;pointer-events:auto;transition:transform .5s cubic-bezier(.22,.72,.3,1);transform:translate3d(0,calc(-1px * var(--pull,0)),0);will-change:transform}
+.drawn .letter{transform:translateY(calc(-1px * var(--pull,0)))}
+.envelope-back{clip-path:none;opacity:.48}
+.envelope-front{opacity:.82}
+.drawn .envelope-back{opacity:.48}
+.drawn .envelope-front{opacity:.82}
+.envelope-back,.envelope-front{transition:opacity 1s}
+.reading-view{position:fixed;inset:0;z-index:60;overflow:auto;background:#f4eff1 url('assets/vellum-fibres.webp') center/cover;color:#705575;opacity:0;visibility:hidden;transform:translateY(35%);transition:transform .8s cubic-bezier(.22,.61,.36,1),opacity .6s,visibility .8s;padding:clamp(32px,7vw,100px) 24px;box-sizing:border-box}
+.is-reading .reading-view{opacity:1;visibility:visible;transform:translateY(0)}
+.reading-inner{max-width:680px;min-height:calc(100svh - 150px);margin:auto;display:flex;flex-direction:column;align-items:center;text-align:center;justify-content:center;border:double 3px #bda8c0;border-radius:44px 44px 8px 8px;padding:60px 24px;box-sizing:border-box}
+.reading-inner h2{font:clamp(38px,7vw,66px) Whimsy,Georgia,serif;font-weight:normal;margin:25px 0}
+.reading-inner p{font:italic clamp(17px,3vw,23px)/1.9 Georgia,serif;margin:25px 0 70px}
+.reading-inner a{color:#705575;text-decoration:none;border-bottom:1px solid #a38aa5;padding:12px 0;font:16px Georgia,serif;letter-spacing:.08em}
+.close-letter{position:absolute;right:22px;top:20px;border:0;background:none;color:#705575;font:14px Georgia,serif;cursor:pointer;padding:12px}
+@media(prefers-reduced-motion:reduce){.reading-view{transition:none}}
+</style>
+<style>#nav,#panel{display:none!important}.letter:before{content:none}.letter{background:#f4eff1 url('assets/letter-bordered.png') center top/100% 100%;border:0!important;padding-top:20%}</style>
+<style>.letter-scene,.letter-scene.drawn{top:50%;transform:translate(-50%,-50%)}.letter{border-radius:0;border:1px solid #a38aa5;transition:transform .5s cubic-bezier(.22,.72,.3,1)}.envelope-back,.drawn .envelope-back{opacity:.8}.envelope-front,.drawn .envelope-front{opacity:1;clip-path:polygon(0 44%,50% 73%,100% 44%,100% 100%,0 100%)}</style>
+<style>
+.hint{display:block}
+.draw-letter{display:none}
+.hint{font-family:'Montserrat',Arial,sans-serif;font-weight:300;letter-spacing:.22em}
+.tag-name,.tag-studio{font-family:'Cormorant Garamond',Georgia,serif;font-style:italic}
+.letter span{font-family:'Cormorant Garamond',Georgia,serif;font-weight:500}
+.letter p{font-family:'Cormorant Garamond',Georgia,serif;font-style:italic}
+.reading-inner h2,.reading-inner p,.reading-inner a,.close-letter{font-family:'Cormorant Garamond',Georgia,serif}
+.stage.open .letter-scene:not(.drawn) .letter{animation:paper-lift 1.55s ease-in-out infinite}
+@keyframes paper-lift{0%,100%{transform:translateY(0)}45%{transform:translateY(-5px)}}
+.letter .letter-description{max-width:33ch;margin:1.1em auto 0;font:400 clamp(13px,2.25vw,16px)/1.35 'Cormorant Garamond',Georgia,serif;color:#705575}
+.brand h1,.reading-inner h2{font-family:'Montserrat',Arial,sans-serif;font-style:normal;font-weight:300;letter-spacing:.08em}
+@media(prefers-reduced-motion:reduce){.stage.open .letter-scene:not(.drawn) .letter{animation:none}}
+</style>
+<link rel="stylesheet" href="palette.css">
+</head>
+<body>
+<main class="stage" id="stage">
+<div class="scene">
+</div>
+<div class="letter-scene" inert>
+<img class="envelope-back" src="assets/lace-envelope.png" alt="Open ivory lace envelope">
+<div class="paper-pocket"><article class="letter" tabindex="0" role="button" aria-label="向上拉出信紙">
+<p>you're invited to</p>
+<span>Nymphéas Studio</span>
+<p class="letter-description">Nymphéas Studio is a handcrafted jewellery studio inspired by nature, the sea, and quiet romance. In silver, pearls and natural stones, we make delicate pieces that carry small fragments of atmosphere.</p>
+</article></div>
+<img class="envelope-front" src="assets/lace-envelope.png" alt="">
+<button class="wax-seal" id="wax-seal" type="button" aria-label="揭開銀色火漆，抽出邀請信"><img src="assets/silver-wax-polished.png" alt=""></button>
+</div>
+<div class="sheet" id="left">
+</div>
+<div class="sheet" id="right">
+</div>
+<svg class="folds" id="folds" aria-hidden="true">
+<defs>
+<linearGradient id="curlL">
+<stop stop-color="#aa9d89"/>
+<stop offset=".24" stop-color="#ded5c5"/>
+<stop offset=".63" stop-color="#fffaf0"/>
+<stop offset="1" stop-color="#e8decd"/>
+</linearGradient>
+<linearGradient id="curlR">
+<stop stop-color="#e8decd"/>
+<stop offset=".37" stop-color="#fffaf0"/>
+<stop offset=".76" stop-color="#ded5c5"/>
+<stop offset="1" stop-color="#aa9d89"/>
+</linearGradient>
+<pattern id="fibres" width="1" height="1" patternContentUnits="objectBoundingBox">
+<image href="assets/vellum-fibres.webp" width="1" height="1" preserveAspectRatio="none"/>
+</pattern>
+<filter id="shadow" x="-100%" y="-20%" width="300%" height="140%">
+<feGaussianBlur stdDeviation="12"/>
+</filter>
+</defs>
+<path id="shadowL" fill="#403342" opacity=".2" filter="url(#shadow)"/>
+<path id="shadowR" fill="#403342" opacity=".2" filter="url(#shadow)"/>
+<path id="curlLeft" fill="url(#curlL)"/>
+<path id="curlRight" fill="url(#curlR)"/>
+<path id="textureLeft" fill="url(#fibres)" opacity=".24"/>
+<path id="textureRight" fill="url(#fibres)" opacity=".24"/>
+</svg>
+<div class="ribbon-assembly" id="ribbon">
+<div class="ribbon">
+<svg viewBox="0 0 1000 1000" preserveAspectRatio="none">
+<defs>
+<linearGradient id="silk" x1="0" y1="0" x2="0" y2="1">
+<stop stop-color="#fffaf0"/>
+<stop offset=".38" stop-color="#eee5d5"/>
+<stop offset=".75" stop-color="#d6c8b3"/>
+<stop offset="1" stop-color="#faf4e8"/>
+</linearGradient>
+</defs>
+<path id="ribbonLeft" fill="url(#silk)" d="M-30 470 C120 460 210 530 350 506 S452 474 500 488 L500 505 C446 490 412 535 350 526 S120 481 -30 489 Z"/>
+<path id="ribbonRight" fill="url(#silk)" d="M500 488 C580 478 622 522 735 510 S892 467 1030 487 L1030 506 C892 486 838 537 735 530 S575 496 500 505 Z"/>
+</svg>
+</div>
+<button class="seal" id="toggle" aria-label="Pull the key and silk tassel to open the paper">
+<svg viewBox="0 0 260 330" aria-hidden="true">
+<defs>
+<linearGradient id="keyPaper" x2=".8" y2="1">
+<stop stop-color="#f6edda"/>
+<stop offset="1" stop-color="#dbceb1"/>
+</linearGradient>
+<linearGradient id="thread">
+<stop stop-color="#b29d76"/>
+<stop offset=".4" stop-color="#f6e7c5"/>
+<stop offset="1" stop-color="#c4ad84"/>
+</linearGradient>
+</defs>
+<path d="M145 34 C130 -8 68 23 73 71 L73 103" fill="none" stroke="#ac9872" stroke-width="5"/>
+<path d="M145 34 C130 -8 68 23 73 71 L73 103" fill="none" stroke="#f3e5c5" stroke-width="2"/>
+<g transform="rotate(-9 160 155)">
+<path d="M155 15 C171 15 179 23 181 34 C209 29 228 46 224 66 C244 87 227 112 201 112 L180 127 L180 231 L214 231 L214 257 L197 257 L197 271 L214 271 L214 296 L166 296 Q144 296 144 276 L144 127 L124 112 C96 111 79 87 99 66 C94 44 115 29 139 34 Q140 15 155 15Z" fill="url(#keyPaper)" stroke="#b6a58d" stroke-width="1"/>
+<path d="M155 24 Q174 23 174 44 C197 36 223 48 214 68 C232 88 214 107 195 104 L170 121 L170 241 L204 241 L204 248 L188 248 L188 280 L204 280 L204 286 L166 286 Q154 286 154 275 L154 121 L129 103 C108 107 90 88 109 68 C102 48 122 37 147 44 Q146 24 155 24Z" fill="none" stroke="#7b4254" stroke-width="1.5"/>
+<circle cx="157" cy="45" r="9" fill="#a18c65"/>
+<circle cx="157" cy="45" r="5.5" fill="#514c41"/>
+<text x="158" y="82" text-anchor="middle" class="tag-name">Nymphéas</text>
+<text x="158" y="102" text-anchor="middle" class="tag-studio">Studio</text>
+<path d="M149 172 L177 172 M149 176 L177 176" stroke="#8d6370" stroke-width=".7"/>
+</g>
+<path d="M66 95 Q73 86 81 95 L84 119 Q74 127 63 120Z" fill="url(#thread)"/>
+<path d="M 81.2 122 C 63.6 160 44.0 201 90.9 223.8" stroke="#c5b38b" stroke-width="0.9" fill="none"/>
+<path d="M 79.8 122 C 80.6 160 46.5 201 51.5 222.5" stroke="#ae9970" stroke-width="0.6" fill="none"/>
+<path d="M 73.9 122 C 79.1 160 61.9 201 84.7 227.8" stroke="#c5b38b" stroke-width="0.8" fill="none"/>
+<path d="M 69.6 122 C 64.9 160 80.4 201 68.5 231.4" stroke="#ae9970" stroke-width="0.5" fill="none"/>
+<path d="M 69.9 122 C 68.7 160 51.1 201 58.2 231.0" stroke="#ae9970" stroke-width="0.6" fill="none"/>
+<path d="M 78.9 122 C 77.4 160 51.1 201 39.7 227.3" stroke="#c5b38b" stroke-width="0.7" fill="none"/>
+<path d="M 68.5 122 C 67.4 160 81.8 201 58.5 231.2" stroke="#f0e3bf" stroke-width="0.7" fill="none"/>
+<path d="M 70.7 122 C 75.1 160 56.1 201 69.2 227.4" stroke="#fff2d1" stroke-width="0.9" fill="none"/>
+<path d="M 80.2 122 C 71.1 160 47.0 201 61.0 223.0" stroke="#fff2d1" stroke-width="0.5" fill="none"/>
+<path d="M 79.1 122 C 65.1 160 53.5 201 37.4 226.6" stroke="#f0e3bf" stroke-width="0.6" fill="none"/>
+<path d="M 73.8 122 C 69.1 160 57.4 201 56.3 223.9" stroke="#c5b38b" stroke-width="0.5" fill="none"/>
+<path d="M 66.4 122 C 80.2 160 75.5 201 72.4 223.0" stroke="#f0e3bf" stroke-width="0.7" fill="none"/>
+<path d="M 78.9 122 C 83.9 160 63.3 201 82.7 227.0" stroke="#ae9970" stroke-width="0.6" fill="none"/>
+<path d="M 69.1 122 C 77.8 160 80.8 201 62.7 222.7" stroke="#dfcca2" stroke-width="1.0" fill="none"/>
+<path d="M 66.0 122 C 81.0 160 54.4 201 43.5 223.9" stroke="#dfcca2" stroke-width="0.8" fill="none"/>
+<path d="M 70.1 122 C 64.5 160 73.5 201 60.5 224.7" stroke="#c5b38b" stroke-width="0.5" fill="none"/>
+<path d="M 67.4 122 C 77.6 160 86.7 201 65.9 226.9" stroke="#c5b38b" stroke-width="0.6" fill="none"/>
+<path d="M 69.0 122 C 62.5 160 63.7 201 48.2 225.4" stroke="#ae9970" stroke-width="0.9" fill="none"/>
+<path d="M 64.7 122 C 69.8 160 80.4 201 38.8 224.0" stroke="#fff2d1" stroke-width="0.8" fill="none"/>
+<path d="M 64.9 122 C 77.9 160 61.5 201 50.7 230.9" stroke="#c5b38b" stroke-width="0.6" fill="none"/>
+<path d="M 65.2 122 C 77.3 160 49.9 201 85.0 228.5" stroke="#c5b38b" stroke-width="0.5" fill="none"/>
+<path d="M 66.9 122 C 67.3 160 80.3 201 74.8 224.8" stroke="#c5b38b" stroke-width="0.6" fill="none"/>
+<path d="M 78.6 122 C 71.8 160 72.1 201 60.9 226.3" stroke="#dfcca2" stroke-width="0.7" fill="none"/>
+<path d="M 79.5 122 C 81.3 160 43.4 201 57.5 228.4" stroke="#f0e3bf" stroke-width="0.9" fill="none"/>
+<path d="M 81.2 122 C 76.1 160 71.5 201 52.1 230.4" stroke="#dfcca2" stroke-width="0.6" fill="none"/>
+<path d="M 69.0 122 C 64.1 160 79.9 201 64.5 229.0" stroke="#f0e3bf" stroke-width="1.0" fill="none"/>
+<path d="M 67.4 122 C 70.5 160 81.5 201 78.1 225.9" stroke="#ae9970" stroke-width="0.6" fill="none"/>
+<path d="M 66.9 122 C 61.3 160 59.7 201 49.7 227.2" stroke="#f0e3bf" stroke-width="0.6" fill="none"/>
+<path d="M 70.5 122 C 84.8 160 43.0 201 54.3 229.7" stroke="#c5b38b" stroke-width="1.0" fill="none"/>
+<path d="M 76.4 122 C 81.0 160 79.3 201 42.3 222.7" stroke="#f0e3bf" stroke-width="0.6" fill="none"/>
+<path d="M 69.5 122 C 68.1 160 83.2 201 68.1 227.3" stroke="#ae9970" stroke-width="0.7" fill="none"/>
+<path d="M 81.5 122 C 84.5 160 75.0 201 85.7 230.0" stroke="#dfcca2" stroke-width="0.8" fill="none"/>
+<path d="M 64.1 122 C 66.3 160 48.2 201 54.0 230.9" stroke="#dfcca2" stroke-width="0.6" fill="none"/>
+<path d="M 80.3 122 C 81.4 160 83.4 201 45.6 224.8" stroke="#fff2d1" stroke-width="0.7" fill="none"/>
+<path d="M 78.6 122 C 68.0 160 66.8 201 84.4 231.6" stroke="#dfcca2" stroke-width="1.0" fill="none"/>
+<path d="M 72.4 122 C 67.3 160 66.9 201 42.0 230.2" stroke="#dfcca2" stroke-width="0.8" fill="none"/>
+<path d="M 72.0 122 C 66.7 160 53.7 201 45.2 227.6" stroke="#dfcca2" stroke-width="0.9" fill="none"/>
+<path d="M 73.1 122 C 61.8 160 57.9 201 57.6 231.1" stroke="#ae9970" stroke-width="0.9" fill="none"/>
+<path d="M 71.8 122 C 74.0 160 60.4 201 61.8 230.5" stroke="#fff2d1" stroke-width="0.7" fill="none"/>
+<path d="M 69.1 122 C 60.3 160 46.6 201 45.3 226.5" stroke="#c5b38b" stroke-width="0.6" fill="none"/>
+<path d="M 72.5 122 C 76.5 160 70.7 201 38.1 231.2" stroke="#ae9970" stroke-width="0.9" fill="none"/>
+<path d="M 73.7 122 C 75.2 160 51.7 201 79.8 229.4" stroke="#fff2d1" stroke-width="0.8" fill="none"/>
+<path d="M 67.1 122 C 70.6 160 83.4 201 67.0 230.2" stroke="#dfcca2" stroke-width="0.9" fill="none"/>
+<path d="M 67.7 122 C 66.4 160 71.3 201 51.6 224.9" stroke="#c5b38b" stroke-width="0.8" fill="none"/>
+<path d="M 68.3 122 C 74.4 160 58.6 201 80.1 225.7" stroke="#c5b38b" stroke-width="0.8" fill="none"/>
+<path d="M 68.1 122 C 70.8 160 48.6 201 76.8 222.5" stroke="#ae9970" stroke-width="0.8" fill="none"/>
+<path d="M 75.7 122 C 62.8 160 78.5 201 64.5 231.2" stroke="#fff2d1" stroke-width="0.6" fill="none"/>
+<path d="M 70.7 122 C 76.9 160 54.5 201 37.5 226.4" stroke="#dfcca2" stroke-width="0.6" fill="none"/>
+<path d="M 80.9 122 C 73.2 160 50.1 201 42.4 225.7" stroke="#fff2d1" stroke-width="0.6" fill="none"/>
+<path d="M 76.9 122 C 78.1 160 72.4 201 74.0 227.4" stroke="#dfcca2" stroke-width="0.8" fill="none"/>
+<path d="M 74.4 122 C 65.9 160 50.9 201 83.4 222.5" stroke="#c5b38b" stroke-width="0.7" fill="none"/>
+<path d="M 64.2 122 C 73.8 160 85.4 201 59.3 231.5" stroke="#fff2d1" stroke-width="0.9" fill="none"/>
+<path d="M 65.7 122 C 82.2 160 85.7 201 51.2 227.7" stroke="#ae9970" stroke-width="0.8" fill="none"/>
+<path d="M 66.6 122 C 83.5 160 83.8 201 64.6 231.0" stroke="#dfcca2" stroke-width="0.8" fill="none"/>
+<path d="M 66.8 122 C 84.8 160 83.5 201 61.4 225.8" stroke="#c5b38b" stroke-width="0.7" fill="none"/>
+<path d="M 64.5 122 C 72.5 160 52.4 201 42.9 227.6" stroke="#f0e3bf" stroke-width="1.0" fill="none"/>
+<path d="M 82.0 122 C 62.9 160 63.4 201 47.9 226.0" stroke="#f0e3bf" stroke-width="0.7" fill="none"/>
+<path d="M 67.0 122 C 60.5 160 48.0 201 51.1 229.6" stroke="#fff2d1" stroke-width="0.8" fill="none"/>
+<path d="M 69.5 122 C 77.3 160 75.2 201 56.8 222.8" stroke="#fff2d1" stroke-width="1.0" fill="none"/>
+<path d="M 66.6 122 C 71.0 160 49.7 201 80.8 229.7" stroke="#dfcca2" stroke-width="0.9" fill="none"/>
+<path d="M 64.2 122 C 83.4 160 78.6 201 65.4 230.8" stroke="#fff2d1" stroke-width="0.6" fill="none"/>
+<path d="M 67.8 122 C 79.1 160 45.0 201 38.5 226.9" stroke="#ae9970" stroke-width="0.7" fill="none"/>
+<path d="M 66.0 122 C 65.9 160 58.5 201 59.4 223.5" stroke="#f0e3bf" stroke-width="0.9" fill="none"/>
+<path d="M 75.1 122 C 77.8 160 48.1 201 83.8 223.4" stroke="#f0e3bf" stroke-width="0.6" fill="none"/>
+<path d="M 69.3 122 C 66.1 160 75.3 201 56.2 229.1" stroke="#dfcca2" stroke-width="0.8" fill="none"/>
+<path d="M 76.0 122 C 77.6 160 67.4 201 49.1 228.3" stroke="#f0e3bf" stroke-width="0.6" fill="none"/>
+<path d="M 68.6 122 C 85.0 160 84.0 201 49.3 222.5" stroke="#fff2d1" stroke-width="0.9" fill="none"/>
+<path d="M 69.3 122 C 63.1 160 47.1 201 85.9 229.4" stroke="#c5b38b" stroke-width="0.8" fill="none"/>
+<path d="M 78.2 122 C 72.7 160 63.4 201 65.0 223.4" stroke="#ae9970" stroke-width="0.9" fill="none"/>
+<path d="M 67.1 122 C 66.9 160 57.0 201 41.6 229.6" stroke="#fff2d1" stroke-width="0.6" fill="none"/>
+<path d="M 74.0 122 C 73.1 160 53.3 201 43.9 228.0" stroke="#c5b38b" stroke-width="0.8" fill="none"/>
+<path d="M 74.4 122 C 60.6 160 56.5 201 80.2 225.8" stroke="#c5b38b" stroke-width="0.7" fill="none"/>
+<path d="M 73.3 122 C 73.0 160 59.1 201 88.2 228.1" stroke="#dfcca2" stroke-width="0.7" fill="none"/>
+<path d="M 68.5 122 C 80.0 160 47.1 201 53.0 228.0" stroke="#fff2d1" stroke-width="0.7" fill="none"/>
+<path d="M 68.8 122 C 69.4 160 48.3 201 51.7 229.7" stroke="#dfcca2" stroke-width="0.6" fill="none"/>
+<path d="M 65.3 122 C 79.2 160 85.5 201 79.9 226.1" stroke="#f0e3bf" stroke-width="0.9" fill="none"/>
+<path d="M 77.4 122 C 72.8 160 87.0 201 79.2 224.4" stroke="#fff2d1" stroke-width="0.8" fill="none"/>
+<path d="M 78.7 122 C 72.1 160 71.6 201 61.1 231.7" stroke="#fff2d1" stroke-width="0.5" fill="none"/>
+<path d="M 70.4 122 C 72.6 160 64.7 201 74.0 231.4" stroke="#ae9970" stroke-width="0.8" fill="none"/>
+<path d="M 71.9 122 C 67.9 160 62.5 201 83.0 231.6" stroke="#fff2d1" stroke-width="0.7" fill="none"/>
+<path d="M 77.8 122 C 69.7 160 82.8 201 76.3 231.6" stroke="#ae9970" stroke-width="0.6" fill="none"/>
+<path d="M 81.4 122 C 78.9 160 58.2 201 77.8 230.6" stroke="#c5b38b" stroke-width="0.7" fill="none"/>
+<path d="M 81.1 122 C 80.4 160 43.4 201 50.5 225.5" stroke="#f0e3bf" stroke-width="0.5" fill="none"/>
+<path d="M 67.3 122 C 65.5 160 52.5 201 65.2 222.5" stroke="#c5b38b" stroke-width="0.5" fill="none"/>
+<path d="M 77.6 122 C 70.9 160 69.1 201 77.2 228.7" stroke="#ae9970" stroke-width="0.9" fill="none"/>
+<path d="M 66.3 122 C 62.0 160 65.5 201 83.6 225.1" stroke="#fff2d1" stroke-width="0.7" fill="none"/>
+<path d="M 81.4 122 C 79.2 160 81.1 201 90.2 230.2" stroke="#f0e3bf" stroke-width="0.8" fill="none"/>
+<path d="M 67.1 122 C 73.0 160 73.5 201 42.2 223.6" stroke="#dfcca2" stroke-width="0.6" fill="none"/>
+<path d="M 72.1 122 C 80.9 160 67.4 201 56.1 224.3" stroke="#dfcca2" stroke-width="0.8" fill="none"/>
+<path d="M 76.1 122 C 66.5 160 83.7 201 39.6 224.9" stroke="#c5b38b" stroke-width="0.8" fill="none"/>
+<path d="M 75.3 122 C 84.0 160 72.3 201 44.0 226.0" stroke="#ae9970" stroke-width="0.8" fill="none"/>
+<path d="M 69.4 122 C 73.3 160 69.3 201 43.8 231.6" stroke="#ae9970" stroke-width="0.7" fill="none"/>
+<path d="M 67.8 122 C 60.9 160 65.1 201 77.5 223.1" stroke="#ae9970" stroke-width="1.0" fill="none"/>
+<path d="M 77.3 122 C 75.2 160 54.2 201 77.7 225.9" stroke="#dfcca2" stroke-width="0.7" fill="none"/>
+<path d="M 81.8 122 C 81.4 160 68.7 201 60.8 227.6" stroke="#c5b38b" stroke-width="0.7" fill="none"/>
+<path d="M63 117 Q74 122 84 116 L84 127 Q73 132 63 126Z" fill="url(#thread)" stroke="#bba57d" stroke-width=".7"/>
+</svg>
+</button>
+</div>
+<div class="hint" id="hint">Pull gently to unfold</div>
+<nav id="nav">
+<button id="intro">序</button>
+<button id="letter-nav">信</button>
+<button id="edit">排版</button>
+</nav>
+<aside id="panel" hidden>
+<select id="target">
+</select>
+<label>大小 <input id="scale" type="range" min="30" max="200" value="100">
+</label>
+<button id="reset">重設排版</button>
+<p>選取元素後拖動。調整儲存於此瀏覽器。</p>
+</aside>
+</main>
+<section class="reading-view" id="reading" aria-label="閱讀這封信" aria-hidden="true" inert>
+<button class="close-letter" id="close-letter" type="button">收起信件 ×</button>
+<div class="reading-inner"><span aria-hidden="true">❧</span><h2 tabindex="-1" id="letter-heading">Nymphéas Studio</h2><p>A little world, unfolding.</p><a href="works.html">走進作品集 →</a></div>
+</section>
+<script>
+const $=id=>document.getElementById(id),stage=$('stage');let progress=0,busy=false,startX=null,raf=0;const clamp=x=>Math.max(0,Math.min(1,x)),ease=x=>x*x*(3-2*x);
+function render(p){progress=p;const w=stage.clientWidth,h=stage.clientHeight;$('folds').setAttribute('viewBox',`0 0 ${w} ${h}`);for(const [side,delay] of [['Left',0],['Right',.075]]){const t=ease(clamp((p-.14-delay)/(.86-delay))),sign=side==='Left'?-1:1;const center=w*.5+ (side==='Left'?5:-5);const base=center+sign*t*w*.72;const bend=Math.sin(t*Math.PI);const curl=Math.min(w*.15,130)*Math.sin(Math.PI*Math.min(1,t*1.45));const edge=[],back=[];for(let i=0;i<=40;i++){const y=h*i/40;const wave=(Math.sin(i/40*Math.PI)*.55+(i/40-.5)*.65)*Math.min(w*.13,100)*bend;const x=base+sign*wave;edge.push([x,y]);back.push([x-sign*curl*(.7+.3*Math.sin(i/40*Math.PI)),y]);}const outer=side==='Left'?-w:w*2;const pts=[[outer,0],...edge,[outer,h]];$(side.toLowerCase()).style.clipPath='polygon('+pts.map(a=>a.map(v=>v+'px').join(' ')).join(',')+')';const path='M'+edge.map(a=>a.join(',')).join('L')+'L'+back.slice().reverse().map(a=>a.join(',')).join('L')+'Z';$('curl'+side).setAttribute('d',path);$('texture'+side).setAttribute('d',path);const shadow=$('shadow'+side[0]);shadow.setAttribute('d',path);shadow.setAttribute('transform',`translate(${-sign*(6+curl*.22)},3)`);shadow.style.opacity=.26*bend;}
+const peel=ease(clamp(p/.23));$('ribbon').style.transform=`translate(${-peel*110}%,${Math.sin(peel*Math.PI)*8}%) rotate(${-peel*18}deg)`;$('hint').style.opacity=1-clamp(p/.1);const sag=Math.sin(peel*Math.PI)*100;$('ribbonLeft').setAttribute('d',`M-30 470 C120 ${460+sag} 210 ${530+sag} 350 506 S452 474 500 488 L500 505 C446 490 412 535 350 526 S120 ${481+sag} -30 489 Z`);$('ribbonRight').setAttribute('d',`M500 488 C580 ${478-sag*.4} 622 ${522+sag} 735 ${510+sag} S892 467 1030 487 L1030 506 C892 486 838 ${537+sag} 735 ${530+sag} S575 ${496-sag*.4} 500 505 Z`);}
+function openPaper(){if(busy||stage.classList.contains('open'))return;busy=true;stage.classList.add('opening');const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;const start=performance.now();function frame(now){let p=reduced?1:clamp((now-start)/500);render(p);if(p<1)raf=requestAnimationFrame(frame);else{busy=false;stage.classList.remove('opening');stage.classList.add('open');document.querySelector('.letter-scene').inert=false;}}raf=requestAnimationFrame(frame);}
+$('toggle').addEventListener('click',openPaper);stage.addEventListener('pointerdown',e=>{startX=e.clientX});stage.addEventListener('pointerup',e=>{if(startX!==null&&Math.abs(e.clientX-startX)>30)openPaper();startX=null});stage.addEventListener('pointercancel',()=>startX=null);window.addEventListener('resize',()=>render(progress));render(0);
+
+const env=document.querySelector('.letter-scene'),paper=document.querySelector('.letter');let amount=0,pull=null,reading=false;
+const maxPull=()=>Math.min(env.clientHeight*.90,Math.max(0,innerHeight*.88-env.clientHeight*.4));
+function setPull(value){amount=Math.max(0,Math.min(maxPull(),value));env.style.setProperty('--pull',amount);env.classList.toggle('drawn',amount>0)}
+let readingTimer;
+function readLetter(){if(document.body.classList.contains('editing')){reading=false;return}window.location.assign('introduction.html')}
+$('close-letter').onclick=()=>{clearTimeout(readingTimer);document.body.classList.remove('is-reading');$('reading').inert=true;$('reading').setAttribute('aria-hidden','true');setPull(0);paper.focus()};
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&document.body.classList.contains('is-reading'))$('close-letter').click()});
+const extract=()=>{if(!stage.classList.contains('open')||reading||document.body.classList.contains('editing'))return;reading=true;setPull(Math.min(maxPull(),env.clientHeight*.72));clearTimeout(readingTimer);readingTimer=setTimeout(readLetter,850)};
+$('wax-seal').onclick=extract;$('letter-nav').onclick=extract;$('intro').onclick=()=>setPull(0);
+paper.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();extract()}});
+paper.onpointerdown=e=>{if(!stage.classList.contains('open')||reading||document.body.classList.contains('editing'))return;pull={y:e.clientY,amount,moved:false};paper.setPointerCapture(e.pointerId);paper.style.transition='none'};
+paper.onpointermove=e=>{if(!pull)return;const distance=pull.y-e.clientY;if(Math.abs(distance)>5)pull.moved=true;setPull(pull.amount+distance)};
+function endPull(){if(!pull)return;const wasTap=!pull.moved;pull=null;paper.style.transition='';if(wasTap||amount>=env.clientHeight*.25)extract();else setPull(0)}paper.onpointerup=endPull;paper.onpointercancel=()=>{pull=null;paper.style.transition='';setPull(0)};
+window.addEventListener('resize',()=>setPull(amount));
+if(location.hash==='#letter'){render(1);stage.classList.add('open');env.inert=false;readLetter()}
+let layout={};try{layout=JSON.parse(localStorage.getItem('nympheas-layout-v2')||'{}')}catch{};const els=[...['.letter-scene','.letter','.letter span','.letter p'].map(s=>document.querySelector(s))];const names=['信封與信紙','信紙','信紙標題','信紙內文'];let selected=0,drag=null;function apply(i){const d=layout[i]||{x:0,y:0,s:100};els[i].style.translate=d.x+'px '+d.y+'px';els[i].style.scale=d.s/100}function save(){try{localStorage.setItem('nympheas-layout-v2',JSON.stringify(layout))}catch{}}function select(i){selected=Number(i);els.forEach(e=>e.classList.remove('selected'));els[selected].classList.add('selected');$('target').value=i;$('scale').value=(layout[i]||{s:100}).s}
+els.forEach((el,i)=>{el.dataset.edit=i;$('target').add(new Option(names[i],i));apply(i);el.addEventListener('pointerdown',e=>{if(!document.body.classList.contains('editing'))return;e.preventDefault();e.stopPropagation();select(i);const d=layout[i]||{x:0,y:0,s:100};layout[i]=d;drag={i,x:e.clientX,y:e.clientY,ox:d.x,oy:d.y};el.setPointerCapture(e.pointerId)})});$('edit').onclick=()=>{$('panel').hidden=!document.body.classList.toggle('editing')};$('target').onchange=()=>select($('target').value);$('scale').oninput=()=>{layout[selected]=layout[selected]||{x:0,y:0,s:100};layout[selected].s=Number($('scale').value);apply(selected);save()};window.addEventListener('pointermove',e=>{if(!drag)return;layout[drag.i].x=drag.ox+e.clientX-drag.x;layout[drag.i].y=drag.oy+e.clientY-drag.y;apply(drag.i)});window.addEventListener('pointerup',()=>{if(drag)save();drag=null});$('reset').onclick=()=>{layout={};els.forEach((e,i)=>apply(i));select(0);save()};select(0);
+</script>
+</body>
+</html>

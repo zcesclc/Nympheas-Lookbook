@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 210">
+  <defs><linearGradient id="g" x2="1" y2="1"><stop stop-color="#ebe5dd"/><stop offset=".55" stop-color="#d8d3d9"/><stop offset="1" stop-color="#c6cfc4"/></linearGradient><filter id="grain"><feTurbulence type="fractalNoise" baseFrequency=".55" numOctaves="3" seed="5"/><feColorMatrix type="saturate" values="0"/><feComponentTransfer><feFuncA type="linear" slope=".085"/></feComponentTransfer></filter></defs>
+  <path fill="url(#g)" d="M0 0h320v210H0z"/><path fill="#fff9ec" opacity=".26" d="M0 123q70-33 132 4t188-15v98H0z"/><path fill="#8b7990" opacity=".13" d="M0 161q73-42 143-10t177-31v90H0z"/><path fill="#fff" filter="url(#grain)" d="M0 0h320v210H0z"/>
+</svg>
